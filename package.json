@@ -1,14 +1,14 @@
 {
   "name": "react-starwars",
-  "version": "1.0.0",
+  "version": "1.0",
   "description": "React applicatin that works on starwars api",
   "main": "index.js",
   "repository": "",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Karthik Dechiraju",
+  "license": "",
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
@@ -20,12 +20,16 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "4.3.0",
-    "react-router": "^2.0.1",
-    "redux": "^3.0.4"
+    "react-router": "2.7.0",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.0.4",
+    "redux-form": "^7.3.0",
+    "redux-thunk": "^2.2.0"
   }
 }
