@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import ContactForm from './Form';
-import { loginUser } from '../actions';
+import { loginUser, logoutUser } from '../actions';
 import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
 
 class login extends Component{
 	
@@ -37,6 +38,15 @@ class login extends Component{
 		}
 	}
 
+	componentWillMount(){
+		if (this.props.has_logged_in) {
+			this.props.logoutUser();
+		}
+	}
+
+	
+
+
 	render(){
 		return(
 			<div className="login_wrapper">
@@ -48,9 +58,9 @@ class login extends Component{
 }
 
 const mapStateToProps = (state) => {
-	const { is_logging, login_error } = state.login;
-	return { is_logging, login_error };
+	const { is_logging, login_error, has_logged_in } = state.login;
+	return { is_logging, login_error, has_logged_in };
 }
 
 
-export default connect(mapStateToProps,{ loginUser })(login);
+export default connect(mapStateToProps,{ loginUser, logoutUser })(login);

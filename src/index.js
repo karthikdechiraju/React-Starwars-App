@@ -10,11 +10,13 @@ import Login from './components/Login'
 import Search from './components/Search'
 
 import authReducer from './reducers/AuthReducers'
+import searchReducer from './reducers/SearchReducer'
 
 // Add the reducer to your store on the `routing` key
 const store = createStore(
   combineReducers({
     login:authReducer,
+    search:searchReducer,
     routing: routerReducer,
     form:formReducer
   }),

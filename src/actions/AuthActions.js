@@ -7,10 +7,7 @@ export const loginUser = ({username, password}) => {
 		var user_matched = false;
 		axios.get(`https://swapi.co/api/people/?search=${username}`)
 		.then((res)=>{
-			console.log(res.data.results)
 			for(name in res.data.results){
-				console.log(res.data.results[name].name)
-				console.log(username)
 				if (res.data.results[name].name == username) {
 					if (res.data.results[name].birth_year == password) {
 						user_matched = true;
@@ -28,6 +25,15 @@ export const loginUser = ({username, password}) => {
 		.catch(() => loginUserFail(dispatch))
 	};
 };
+
+
+export const logoutUser = () => {
+	return{
+		type:'LOGOUT_USER'
+	}
+}
+
+
 
 const loginUserFail = (dispatch) => {
 	dispatch({

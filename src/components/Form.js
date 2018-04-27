@@ -34,8 +34,9 @@ var loginForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-        <div className="login-div">
-            <div className="shadow login-form">
+        <div className="login-div shadow ">
+            <div className="login-form">
+                <p className="login_statement">LOGIN TO THE WORLD OF STARWARS</p>
                 <div className="field">
                     <Field name="username" component={renderField} label="Username" type="text" />
                 </div>
@@ -45,10 +46,6 @@ var loginForm = (props) => {
                 <button type="submit" className="shadow primaryColor">{buttonText}</button>
             </div>
         </div>
-      <div>
-      </div>
-      <div>
-      </div>
     </form>
   )
 }

@@ -1,0 +1,54 @@
+.search_holder{
+	padding-top: 50px;
+}
+
+.search_bar{
+    width: 100%;
+    background: #fff;
+    border: 0;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 22px;
+    padding: 0px 15px;
+}
+
+.graph{
+    border-radius: 5px;
+}
+
+.graph_holder{
+    margin-top: 20px;
+}
+
+.inital_search{
+    display: flex;
+    height: 350px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.list{
+    width: 100%;
+    padding: 20px;
+}
+
+.graph_div{
+    width:75%;
+}
+.list_div{
+    width:20%;
+}
+
+.main_div{
+    display:flex;
+    justify-content:space-around;
+}
+
+.planet_item{
+    color:#673AB7;
+    cursor:pointer;
+}
